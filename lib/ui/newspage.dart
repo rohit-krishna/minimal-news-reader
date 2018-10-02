@@ -108,7 +108,23 @@ class _newspageState extends State<newspage> {
                 ),
               ),
             ),
-
+            
+            Padding(
+              padding: const EdgeInsets.only(left: 23.0,top: 8.0,bottom: 8.0),
+              child: new Row(
+                children: <Widget>[
+                  Icon(Icons.person_outline,size: 15.0,),
+                  SizedBox(width: 10.0,),
+                  RichText(text: new TextSpan(
+                    children:[
+                      new TextSpan(text: "Author : ",style: TextStyle(color: Colors.black54)),
+                      new TextSpan(text: "${widget.newsTitle['author']}",
+                          style: TextStyle(color: Colors.red,fontStyle: FontStyle.italic))
+                    ]
+                  ))
+                ],
+              ),
+            ),
             new Container(
               child: Stack(
                 children: <Widget>[
@@ -131,7 +147,7 @@ class _newspageState extends State<newspage> {
                   Column(
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(top: 100.0,left: 4.8,right: 4.8),
+                        padding: const EdgeInsets.only(top: 70.0,left: 4.8,right: 4.8),
                         child: ButtonTheme(
                           height: 75.0,
                           minWidth: MediaQuery.of(context).size.width,
